@@ -87,7 +87,7 @@ class MusicDownloader:
         for file in downloaded_files:
             song_name = os.path.splitext(file)[0]
             cleaned_name = re.sub(r"[^\w\s]", "", song_name)
-            downloaded_songs.append(cleaned_name.lower())  # 转换为小写
+            downloaded_songs.append(cleaned_name.lower())
         return downloaded_songs
 
     def filter_downloaded_songs(self, songs):
@@ -114,7 +114,3 @@ class MusicDownloader:
 if __name__ == "__main__":
     downloader = MusicDownloader()
     downloader.run()
-    # songs = downloader.read_song_names("./songs")
-    # songs = downloader.filter_downloaded_songs(songs)
-    # print(songs)
-
